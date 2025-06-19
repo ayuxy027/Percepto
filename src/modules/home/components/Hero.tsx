@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Camera, Box, Zap, ArrowRight, Play } from 'lucide-react'
@@ -24,10 +22,10 @@ const Hero: React.FC<HeroProps> = ({ darkMode = false }) => {
 
   const blobVariants = {
     hidden: { opacity: 0, scale: 0.8 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       scale: 1,
-      transition: { 
+      transition: {
         duration: 3,
         ease: "easeInOut",
       }
@@ -42,10 +40,10 @@ const Hero: React.FC<HeroProps> = ({ darkMode = false }) => {
     `}>
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-noise opacity-5" />
-        
+        <div className="absolute inset-0 bg-noise opacity-[0.05]" />
+
         {/* Primary Ambient Blob */}
-        <motion.div 
+        <motion.div
           variants={blobVariants}
           initial="hidden"
           animate="visible"
@@ -59,7 +57,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode = false }) => {
         />
 
         {/* Secondary Ambient Blob */}
-        <motion.div 
+        <motion.div
           variants={blobVariants}
           initial="hidden"
           animate="visible"
@@ -74,7 +72,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode = false }) => {
         />
 
         {/* Accent Ambient Blob */}
-        <motion.div 
+        <motion.div
           variants={blobVariants}
           initial="hidden"
           animate="visible"
@@ -103,8 +101,8 @@ const Hero: React.FC<HeroProps> = ({ darkMode = false }) => {
             className={`
               inline-block mb-6 px-6 py-2 rounded-full
               backdrop-blur-sm border
-              ${darkMode 
-                ? 'bg-surface-dark border-ambient-dark text-primary-coral-light' 
+              ${darkMode
+                ? 'bg-surface-dark border-ambient-dark text-primary-coral-light'
                 : 'bg-surface-light border-ambient-base text-primary-coral-dark'}
               transition-colors duration-700
             `}
@@ -146,7 +144,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode = false }) => {
               transition-colors duration-700
             `}
           >
-            Experience real-time object detection powered by cutting-edge AI. 
+            Experience real-time object detection powered by cutting-edge AI.
             Process images and video streams with unmatched accuracy.
           </motion.p>
 
@@ -157,7 +155,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode = false }) => {
             transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
             className="flex flex-col sm:flex-row justify-center gap-4 mb-12"
           >
-            <motion.button 
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
@@ -176,7 +174,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode = false }) => {
               </span>
             </motion.button>
 
-            <motion.button 
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
@@ -185,8 +183,8 @@ const Hero: React.FC<HeroProps> = ({ darkMode = false }) => {
                 text-lg font-medium
                 transition-all duration-300
                 border backdrop-blur-sm
-                ${darkMode 
-                  ? 'bg-surface-dark border-ambient-dark text-ambient-light hover:bg-ambient-dark' 
+                ${darkMode
+                  ? 'bg-surface-dark border-ambient-dark text-ambient-light hover:bg-ambient-dark'
                   : 'bg-surface-light border-ambient-base text-ambient-deeper hover:bg-ambient-base'}
                 hover:shadow-lg
               `}
@@ -211,8 +209,8 @@ const Hero: React.FC<HeroProps> = ({ darkMode = false }) => {
                   group p-6 rounded-xl
                   border backdrop-blur-sm
                   transition-all duration-300
-                  ${darkMode 
-                    ? 'bg-surface-dark border-ambient-dark hover:bg-ambient-dark' 
+                  ${darkMode
+                    ? 'bg-surface-dark border-ambient-dark hover:bg-ambient-dark'
                     : 'bg-surface-light border-ambient-base hover:bg-ambient-base'}
                   hover:shadow-lg
                 `}

@@ -1,5 +1,3 @@
-"use client"
-
 import React, { useState } from 'react';
 import { Sun, Moon, LogOut, User } from 'lucide-react';
 
@@ -35,26 +33,26 @@ const Navbar: React.FC<NavbarProps> = ({
       <nav className={`
         fixed top-0 left-0 right-0 z-50
         backdrop-blur-xl
-        ${darkMode 
-          ? 'bg-ambient-deeper/80 border-b border-ambient-dark/20' 
+        ${darkMode
+          ? 'bg-ambient-deeper/80 border-b border-ambient-dark/20'
           : 'bg-ambient-light/80 border-b border-ambient-base/20'}
         ${className}
       `}>
         {/* Ambient Glow Effects */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute inset-0 bg-noise opacity-[0.15]" />
+          <div className="absolute inset-0 bg-noise opacity-15" />
           <div className={`
             absolute -top-20 left-1/4 w-64 h-64 rounded-full
             blur-4xl
-            ${darkMode 
-              ? 'bg-primary-ocean-dark opacity-[0.08]' 
+            ${darkMode
+              ? 'bg-primary-ocean-dark opacity-[0.08]'
               : 'bg-primary-ocean-light opacity-[0.25]'}
           `} />
           <div className={`
             absolute -top-20 right-1/4 w-64 h-64 rounded-full
             blur-4xl
-            ${darkMode 
-              ? 'bg-primary-coral-dark opacity-[0.08]' 
+            ${darkMode
+              ? 'bg-primary-coral-dark opacity-[0.08]'
               : 'bg-primary-coral-light opacity-[0.25]'}
           `} />
         </div>
@@ -88,8 +86,8 @@ const Navbar: React.FC<NavbarProps> = ({
                   p-2.5 rounded-xl
                   transition-all duration-300
                   backdrop-blur-sm
-                  ${darkMode 
-                    ? 'bg-surface-dark hover:bg-surface-dark/80 text-primary-coral-light' 
+                  ${darkMode
+                    ? 'bg-surface-dark hover:bg-surface-dark/80 text-primary-coral-light'
                     : 'bg-surface-light hover:bg-surface-light/80 text-primary-coral-dark'}
                 `}
                 aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
@@ -110,8 +108,8 @@ const Navbar: React.FC<NavbarProps> = ({
                       flex items-center gap-3 p-2 pr-4 rounded-xl
                       transition-all duration-300
                       backdrop-blur-sm
-                      ${darkMode 
-                        ? 'bg-surface-dark hover:bg-surface-dark/80 text-ambient-light' 
+                      ${darkMode
+                        ? 'bg-surface-dark hover:bg-surface-dark/80 text-ambient-light'
                         : 'bg-surface-light hover:bg-surface-light/80 text-ambient-deeper'}
                     `}
                   >
@@ -122,9 +120,9 @@ const Navbar: React.FC<NavbarProps> = ({
                       " />
                       <div className="relative w-9 h-9 overflow-hidden rounded-full border-2 border-primary-ocean-base">
                         {user.imageUrl ? (
-                          <img 
-                            src={user.imageUrl} 
-                            alt={user.name} 
+                          <img
+                            src={user.imageUrl}
+                            alt={user.name}
                             className="object-cover w-full h-full"
                           />
                         ) : (
@@ -148,8 +146,8 @@ const Navbar: React.FC<NavbarProps> = ({
                       absolute right-0 top-14 w-48
                       rounded-xl backdrop-blur-xl
                       border shadow-lg
-                      ${darkMode 
-                        ? 'bg-surface-dark border-ambient-dark' 
+                      ${darkMode
+                        ? 'bg-surface-dark border-ambient-dark'
                         : 'bg-surface-light border-ambient-base'}
                     `}>
                       <button
@@ -158,8 +156,8 @@ const Navbar: React.FC<NavbarProps> = ({
                           w-full p-3 rounded-lg
                           flex items-center gap-2
                           transition-all duration-300
-                          ${darkMode 
-                            ? 'hover:bg-ambient-deeper/50 text-primary-coral-light' 
+                          ${darkMode
+                            ? 'hover:bg-ambient-deeper/50 text-primary-coral-light'
                             : 'hover:bg-ambient-base/50 text-primary-coral-dark'}
                         `}
                       >
